@@ -3,7 +3,7 @@
 
 /*
  * Grammar: S -> 0 S 1 | 0 1
- * It is not invalid for a predictive parser, because S can be split into S1 and S2 like below:
+ * It is invalid for a predictive parser, because S can be split into S1 and S2 like below:
  * - S1 -> 0 S 1, FIRST(S1) = { 0 }
  * - S2 -> 0 1, FIRST(S2) = { 0 }
  * parser has no idea which S should be used, therefore, a conversion must be applied to S:
