@@ -8,6 +8,10 @@ public class Parser {
         lookahead = System.in.read();
     }
 
+    /**
+     * The reason why return can be used in else branch instead of throw
+     * an error is that rest can be epsilon in translation scheme.
+     */
     void expr() throws IOException {
         term();
         while(true) {
